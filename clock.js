@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import SwitchBW from './switchBW' 
 
 export default class Clock extends Component {
     constructor (props) {
@@ -13,7 +12,6 @@ export default class Clock extends Component {
             minute: 0,
             second: 0,
             day: '',
-            style: '',
             interval: false}
         let curDate = new Date()
         
@@ -64,16 +62,6 @@ export default class Clock extends Component {
             case 7:
                 this.setState({day: '日曜'})
                 break
-        }
-    }
-
-    switchBWcontrol () {
-        if (SwitchBW.state.btnh === false){
-            this.setState({style: '{background-color: white;} h1{color: black;}'})
-        }
-
-        if (SwitchBW.state.btnh === true) {
-            this.setState({style: '{background-color: black;} h1{color: white;}'})
         }
     }
 
